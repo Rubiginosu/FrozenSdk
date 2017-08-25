@@ -66,20 +66,6 @@ class FrozenGo
 
 
     /**
-     * ...  窝也不知道这函数怎么用
-     *
-     * @param int $id 服务器ID
-     * @return Collection
-     */
-    public function getValidationKeyPairs($id)
-    {
-        $result = $this->sendMethod("GetPairs", $id);
-        if ($result->has('Message'))
-            $result->put('Message',json_decode($result->get('Message')));
-        return $result;
-    }
-
-    /**
      * 在Daemon上安装一个配置文件
      *
      * @param string $name 配置文件名
